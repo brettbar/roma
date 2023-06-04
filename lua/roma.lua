@@ -13,13 +13,13 @@ local z = {
   base7 = "#9ca0a4",
   base8 = "#b1b1b1",
 
-  bg = "#252525",
+  bg = "#000000",
   bg1 = "#504945",
   bg_popup = "#3E4556",
   bg_highlight = "#2E323C",
   bg_visual = "#b3deef",
 
-  fg = "#b3b1ad",
+  fg = "#a3a2a2",
   fg_alt = "#5B6268",
 
   black = "#000000",
@@ -160,9 +160,9 @@ local syntax = {
   SpecialChar = { fg = z.maroon },
   Type = { fg = z.dark_red },
   Function = { fg = z.dark_red },
-  String = { fg = z.brown },
+  String = { fg = z.green },
   Constant = { fg = z.brown },
-  Character = { fg = z.brown },
+  Character = { fg = z.green },
   Macro = { fg = z.light_orange },
   Identifier = { fg = z.fg },
 
@@ -182,7 +182,7 @@ local syntax = {
 
 local plugin_syntax = {
   ["@function"] = { fg = z.red },
-  ["@method"] = { fg = z.orange },
+  ["@method"] = { fg = z.red },
   ["@keyword.function"] = { fg = z.red },
   ["@property"] = { fg = z.fg },
   ["@type"] = { fg = z.dark_red },
