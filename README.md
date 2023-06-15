@@ -1,98 +1,101 @@
-# Neovim Ayu
+<h1 align="center">
+  <img
+    src="https://raw.githubusercontent.com/catppuccin/catppuccin/main/assets/misc/transparent.png"
+    height="30"
+    width="0px"
+  />
+  🎨 zephyr-nvim
+  <img
+    src="https://raw.githubusercontent.com/catppuccin/catppuccin/main/assets/misc/transparent.png"
+    height="30"
+    width="0px"
+  />
+</h1>
 
-A colorscheme for Neovim 0.8+ reimplemented in lua from [ayu-vim](https://github.com/Luxed/ayu-vim).
+<p align="center">
+  <a href="https://github.com/glepnir/zephyr-nvim/stargazers">
+    <img
+      alt="Stargazers"
+      src="https://img.shields.io/github/stars/glepnir/zephyr-nvim?style=for-the-badge&logo=starship&color=c678dd&logoColor=d9e0ee&labelColor=282a36"
+    />
+  </a>
+  <a href="https://github.com/glepnir/zephyr-nvim/issues">
+    <img
+      alt="Issues"
+      src="https://img.shields.io/github/issues/glepnir/zephyr-nvim?style=for-the-badge&logo=gitbook&color=f0c062&logoColor=d9e0ee&labelColor=282a36"
+    />
+  </a>
+  <a href="https://github.com/glepnir/zephyr-nvim/contributors">
+    <img
+      alt="Contributors"
+      src="https://img.shields.io/github/contributors/glepnir/zephyr-nvim?style=for-the-badge&logo=opensourceinitiative&color=abcf84&logoColor=d9e0ee&labelColor=282a36"
+    />
+  </a>
+</p>
 
-## Screenshots
+<p align="center">
+  <img src="https://user-images.githubusercontent.com/41671631/172047114-58deb5a9-f67b-400b-bace-2982bf901ff6.png"
+  height = "40%"
+  widht = "40%"
+  />
+</p>
 
-![dark](screenshots/dark.png)
+&nbsp;
 
-![mirage](screenshots/mirage.png)
+## 💭 About
 
-![light](screenshots/light.png)
+A dark neovim colorscheme written in lua and syntax based on
+[nvim-treesitter](https://github.com/nvim-treesitter/nvim-treesitter).
 
-## Commands
+## ⚙️ Setup
 
-To apply the colorscheme, you can call `require('ayu').colorscheme()` from lua or use `:colorscheme ayu` command. By default it respects your `'background'` (see `:h background`) setting to choose between `dark` and `light` variants. But you can use the `:colorscheme ayu-dark`, `:colorscheme ayu-light`, or `:colorscheme ayu-mirage` commands to apply a variant directly.
+- [vim-plug](https://github.com/junegunn/vim-plug)
 
-## Configuration
+```vim
+Plug 'glepnir/zephyr-nvim'
+Plug 'nvim-treesitter/nvim-treesitter'
+```
 
-To configure the plugin, you can call `require('ayu').setup(values)`, where `values` is a dictionary with the parameters you want to override. Here are the defaults:
+- [packer.nvim](https://github.com/wbthomason/packer.nvim)
 
 ```lua
-require('ayu').setup({
-    mirage = false, -- Set to `true` to use `mirage` variant instead of `dark` for dark background.
-    overrides = {}, -- A dictionary of group names, each associated with a dictionary of parameters (`bg`, `fg`, `sp` and `style`) and colors in hex.
+use({
+  'glepnir/zephyr-nvim',
+  requires = { 'nvim-treesitter/nvim-treesitter', opt = true },
 })
 ```
 
-Alternatively, `overrides` can be a function that returns a dictionary of the same format. You can use the function to override based on a dynamic condition, such as the value of `'background'`.
+## ▶️ Usage
 
-Colorscheme also provides a theme for [lualine.nvim](https://github.com/nvim-lualine/lualine.nvim). You can set in `setup` lualine:
-
-```lua
-require('lualine').setup({
-  options = {
-    theme = 'ayu',
-  },
-})
+```vim
+colorscheme zephyr
 ```
 
-### Overrides examples
-
-#### Replace `IncSearch` group with foreground set to `#FFFFFF`
+or
 
 ```lua
-require('ayu').setup({
-  overrides = {
-    IncSearch = { fg = '#FFFFFF' }
-  }
-})
+lua require('zephyr')
 ```
-
-**Tip:** You can use `:source $VIMRUNTIME/syntax/hitest.vim` to see all highlighting groups.
-
-#### Re-use colors from the colorscheme
 
 ```lua
-local colors = require('ayu.colors')
-colors.generate() -- Pass `true` to enable mirage
-
-require('ayu').setup({
-  overrides = {
-    IncSearch = { fg = colors.fg }
-  }
-})
+-- Get zephyr color
+local zephyr =  require('zephyr').zephyr.yellow/teal/fg/bg
 ```
 
-**Tip:** You can use `:lua print(vim.inspect(require('ayu.colors')))` command to check all available colors.
+&nbsp;
 
-#### Set background color of non-active windows for both light and dark backgrounds
-
-In this case you need to use a function to dynamically generate colors:
-
-```lua
-require('ayu').setup({
-  overrides = function()
-    if vim.o.background == 'dark' then
-      return { NormalNC = {bg = '#0f151e', fg = '#808080'} }
-    else
-      return { NormalNC = {bg = '#f0f0f0', fg = '#808080'} }
-    end
-  end
-})
-```
-
-**Tip:** If you use `ayu.colors` as in the example above, you don't need to check for `vim.o.background`, but you still need to use a function.
-
-#### Disable _italic_ for comments
-
-```lua
-local colors = require('ayu.colors')
-colors.generate() -- Pass `true` to enable mirage
-
-require('ayu').setup({
-  overrides = function()
-    return { Comment = { fg = colors.comment } }
-  end
-})
-```
+<p align="center">
+  <img
+    src="https://raw.githubusercontent.com/catppuccin/catppuccin/dev/assets/footers/gray0_ctp_on_line.svg?sanitize=true"
+  />
+</p>
+<p align="center">
+  Copyright &copy; 2020-present
+  <a href="https://github.com/glepnir" target="_blank">Raphael</a>
+</p>
+<p align="center">
+  <a href="https://github.com/glepnir/zephyr-nvim/blob/master/LICENSE"
+    ><img
+      src="https://img.shields.io/static/v1.svg?style=for-the-badge&label=License&message=MIT&logoColor=d9e0ee&colorA=282a36&colorB=c678dd"
+  /></a>
+</p>
