@@ -1,5 +1,6 @@
 local config = {
   defaults = {
+    mirage = false,
     overrides = {},
   },
 }
