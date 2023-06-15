@@ -1,0 +1,21 @@
+{
+  "name": "roma",
+  "displayName": "roma",
+  "description": "Neovim Roma colorscheme ported to VSCode",
+  "version": "0.0.1",
+  "engines": {
+    "vscode": "^1.79.0"
+  },
+  "categories": [
+    "Themes"
+  ],
+  "contributes": {
+    "themes": [
+      {
+        "label": "Roma",
+        "uiTheme": "vs-dark",
+        "path": "./themes/Roma-color-theme.json"
+      }
+    ]
+  }
+}
