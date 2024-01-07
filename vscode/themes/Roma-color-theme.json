@@ -29,9 +29,9 @@
 		"dropdown.border": "#ffffff1f",
 		"dropdown.foreground": "#cccccc",
 		"dropdown.listBackground": "#313131",
-		"editor.background": "#181818",
+		"editor.background": "#1f1f1f",
 		"editor.findMatchBackground": "#9e6a03",
-		"editor.foreground": "#b3b1ad",
+		"editor.foreground": "#cccccc",
 		"editor.inactiveSelectionBackground": "#3a3d41",
 		"editor.selectionBackground": "#273747",
 		"editor.selectionHighlightBackground": "#add6ff26",
@@ -75,7 +75,7 @@
 		"notifications.background": "#181818",
 		"notifications.border": "#ffffff15",
 		"notifications.foreground": "#cccccc",
-		"panel.background": "#131313",
+		"panel.background": "#181818",
 		"panel.border": "#ffffff15",
 		"panelInput.border": "#ffffff15",
 		"panelTitle.activeBorder": "#ff595f",
@@ -99,7 +99,7 @@
 		"settings.dropdownBorder": "#ffffff1f",
 		"settings.headerForeground": "#ffffff",
 		"settings.modifiedItemIndicator": "#bb800966",
-		"sideBar.background": "#131313",
+		"sideBar.background": "#181818",
 		"sideBar.border": "#ffffff15",
 		"sideBar.foreground": "#cccccc",
 		"sideBarSectionHeader.background": "#181818",
@@ -160,22 +160,11 @@
 			}
 		},
 		{
-			"name": "Variables",
 			"scope": [
-				"variable",
-				"string constant.other.placeholder"
+				"punctuation.separator"
 			],
 			"settings": {
-				"foreground": "#b3b1ad"
-			}
-		},
-		{
-			"name": "Colors",
-			"scope": [
-				"constant.other.color"
-			],
-			"settings": {
-				"foreground": "#ffffff"
+				"foreground": "#cccccc",
 			}
 		},
 		{
@@ -284,12 +273,11 @@
 				"support.constant",
 				"constant.character",
 				"constant.escape",
-				"variable.parameter",
 				"keyword.other.unit",
 				"keyword.other"
 			],
 			"settings": {
-				"foreground": "#ffee99"
+				"foreground": "#FFCB6B"
 			}
 		},
 		{
@@ -311,6 +299,7 @@
 		{
 			"name": "Class",
 			"scope": [
+				"support.type",
 				"entity.name"
 			],
 			"settings": {
@@ -320,7 +309,6 @@
 		{
 			"name": "Support",
 			"scope": [
-				"support.type",
 				"support.class",
 				"support.other.namespace.use.php",
 				"meta.use.php",
@@ -330,15 +318,6 @@
 			],
 			"settings": {
 				"foreground": "#FFCB6B"
-			}
-		},
-		{
-			"name": "Entity Types",
-			"scope": [
-				"support.type"
-			],
-			"settings": {
-				"foreground": "#B2CCD6"
 			}
 		},
 		{
@@ -402,7 +381,7 @@
 				"entity.other.attribute-name"
 			],
 			"settings": {
-				"foreground": "#C792EA"
+				"foreground": "#ff8f40"
 			}
 		},
 		{
