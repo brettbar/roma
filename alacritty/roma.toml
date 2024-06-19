@@ -1,0 +1,30 @@
+# Colors (Roma)
+# author brettbar 
+
+[colors.primary]
+background = '#0A0E14'
+foreground = '#b3b1ad'
+
+[colors.cursor]
+text = '#0A0E14'
+cursor = '#b3b1ad'
+
+[colors.normal]
+black = '#0A0E14'
+red = '#F07178'
+green = '#C2D94C'
+yellow = '#E6B450'
+blue = '#FF5454' 
+magenta = '#FFEE99'
+cyan = '#95E6CB'
+white = '#b3b1ad'
+
+[colors.bright]
+black = '#0A0E14'
+red = '#F07178'
+green = '#C2D94C'
+yellow = '#E6B450'
+blue = '#FF5454' 
+magenta = '#FFEE99'
+cyan = '#95E6CB'
+white = '#b3b1ad'
